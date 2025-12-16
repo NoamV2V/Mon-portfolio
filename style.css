@@ -336,73 +336,40 @@ section {
     list-style: square;
 }
 /* 6. Contact */
-.contact {
+.contact-form {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Tout centrer pour un rendu plus pro */
-    text-align: center;
-}
-
-.contact-container {
-    max-width: 800px;
+    width: 50%;
     margin: 0 auto;
+    padding: 3rem;
     background: var(--secondary-bg-color);
-    padding: 5rem;
-    border-radius: 2rem;
-    border: 0.1rem solid var(--main-color);
-    box-shadow: 0 0 2rem rgba(0, 238, 255, 0.1);
+    border-radius: 1rem;
 }
 
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem; /* Espace entre Email, LinkedIn, GitHub */
-    margin-bottom: 4rem;
-}
-
-.contact-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    font-size: 2.2rem; /* Texte bien lisible */
-    color: var(--text-color);
-    transition: 0.3s;
-}
-
-.contact-item i {
-    color: var(--main-color);
-    font-size: 2.8rem; /* Icônes plus grandes */
-}
-
-.contact-item a {
-    color: var(--main-color);
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.contact-item a:hover {
-    text-decoration: underline;
-    text-shadow: 0 0 1rem var(--shadow-color);
-}
-
-.contact-text {
-    font-size: 1.8rem;
-    line-height: 1.6;
-    color: var(--text-color);
-    opacity: 0.9;
-    margin-top: 2rem;
-}
-
-/* --- FOOTER --- */
-.footer {
-    padding: 3rem 9%;
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
     background: var(--bg-color);
-    border-top: 0.1rem solid var(--secondary-bg-color);
-    text-align: center;
+    border: 0.1rem solid var(--main-color);
+    color: white;
+    border-radius: 0.8rem;
+    font-size: 1.4rem;
 }
 
-.footer-text p {
-    font-size: 1.6rem;
-    color: var(--text-color);
+/* 7. Footer */
+.footer {
+    padding: 2rem 9%;
+    background: var(--secondary-bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .accueil-content { flex-direction: column; text-align: center; }
+    .image-zone { order: -1; margin-bottom: 3rem; }
+    .projets-container, .competences-grid { grid-template-columns: 1fr; }
+    .contact-form { width: 100%; }
 }
