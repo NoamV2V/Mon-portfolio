@@ -1,12 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio - Noam ID Belaid | Administrateur SISR</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-    <h1>Mon portfolio</h1>
-    <h2>Je sais pas</h2>
+
+    <header class="header">
+        <a href="#" class="logo">Noam ID Belaid</a>
+        <nav class="navbar">
+            <a href="#accueil">Accueil</a>
+            <a href="#competences">Compétences</a>
+            <a href="#projets">Projets</a>
+            <a href="#contact">Contact</a>
+            <a href="https://www.linkedin.com/in/noam-id-belaid-b8488431b/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </nav>
+    </header>
+
+    <section class="accueil" id="accueil">
+        <div class="accueil-content">
+            <div class="text-zone">
+                <p class="greeting">Bonjour, je suis</p>
+                <h1>Noam ID Belaid.</h1>
+                <h2>Futur Expert en Systèmes d'Information | <span class="sisr-highlight">BTS SIO option SISR</span>.</h2>
+                <p class="accroche">Conception, Déploiement et Sécurisation d'infrastructures informatiques robustes.</p>
+                <div class="btn-box">
+                    <a href="#" class="btn-main" download>Télécharger mon CV</a>
+                </div>
+            </div>
+            <div class="image-zone">
+                <img src="profile.jpg" alt="Photo de profil de Noam" class="profile-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="competences" id="competences">
+        <h2 class="heading"><i class="fas fa-tools"></i> Mes <span>Compétences</span> Techniques</h2>
+        <div class="competences-grid">
+            
+            <div class="competence-box">
+                <h3><i class="fas fa-server"></i> Systèmes & Serveurs</h3>
+                <div class="skill-item">
+                    <p>Windows Server</p> <div class="progress-bar"><span style="width: 80%;"></span></div>
+                </div>
+                <div class="skill-item">
+                    <p>Linux (Administration)</p> <div class="progress-bar"><span style="width: 80%;"></span></div>
+                </div>
+                <div class="skill-item">
+                    <p>Apache (Installation/Config)</p> <div class="progress-bar"><span style="width: 60%;"></span></div>
+                </div>
+            </div>
+
+            <div class="competence-box">
+                <h3><i class="fas fa-network-wired"></i> Réseaux & Protocoles</h3>
+                <div class="skill-item">
+                    <p>Routage / Commutation</p> <div class="progress-bar"><span style="width: 80%;"></span></div>
+                </div>
+                <div class="skill-item">
+                    <p>Adressage IPv4 & Sous-réseautage</p> <div class="progress-bar"><span style="width: 80%;"></span></div>
+                </div>
+                <div class="skill-item">
+                    <p>Modèle OSI / TCP/IP</p> <div class="progress-bar"><span style="width: 80%;"></span></div>
+                </div>
+            </div>
+
+            <div class="competence-box">
+                <h3><i class="fas fa-shield-alt"></i> Sécurité & Virtualisation</h3>
+                <div class="skill-item">
+                    <p>VMWare / Hyper-V</p> <div class="progress-bar"><span style="width: 80%;"></span></div>
+                </div>
+                <div class="skill-item">
+                    <p>Configuration Firewall</p> <div class="progress-bar"><span style="width: 80%;"></span></div>
+                </div>
+                <div class="skill-item">
+                    <p>Chiffrement (SSL/TLS)</p> <div class="progress-bar"><span style="width: 80%;"></span></div>
+                </div>
+            </div>
+
+            <div class="competence-box">
+                <h3><i class="fas fa-terminal"></i> Scripting & Automatisation</h3>
+                <div class="skill-item">
+                    <p>PowerShell</p> <div class="progress-bar"><span style="width: 80%;"></span></div>
+                </div>
+                <div class="skill-item">
+                    <p>Scripting Bash / Shell</p> <div class="progress-bar"><span style="width: 60%;"></span></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="projets" id="projets">
+        <h2 class="heading"><i class="fas fa-folder-open"></i> Mes <span>Projets</span> Clés</h2>
+        <div class="projets-container">
+            
+            <div class="projet-card">
+                <div class="projet-info">
+                    <h3>Projet PILOTIS</h3>
+                    <p class="technologies">Technologies: Windows Server, Active Directory (AD), Virtualisation</p>
+                    <p><strong>But Principal :</strong> Modernisation, centralisation et sécurisation des infrastructures systèmes et réseaux de collèges. Ce projet met en évidence la gestion de l'identité et l'infrastructure à grande échelle.</p>
+                </div>
+                <div class="projet-links">
+                    <a href="#" target="_blank" class="btn-project"><i class="far fa-file-pdf"></i> Voir Présentation PDF</a>
+                    <a href="https://github.com/NoamV2V" target="_blank" class="btn-project"><i class="fab fa-github"></i> Dépôt GitHub</a>
+                </div>
+            </div>
+
+            <div class="projet-card">
+                <div class="projet-info">
+                    <h3>Project TVM V2 Dashboard</h3>
+                    <p class="technologies">Technologies: MySQL, Power BI, Analyse de données</p>
+                    <p><strong>But Principal :</strong> Création d'un tableau de bord automatisé pour l'analyse des vulnérabilités d'une entreprise par rapport aux semaines passées, offrant une vision claire pour la prise de décision en sécurité.</p>
+                </div>
+                <div class="projet-links">
+                    <a href="#" target="_blank" class="btn-project"><i class="far fa-file-pdf"></i> Voir Présentation PDF</a>
+                    <a href="https://github.com/NoamV2V" target="_blank" class="btn-project"><i class="fab fa-github"></i> Dépôt GitHub</a>
+                </div>
+            </div>
+
+            <div class="projet-card">
+                <div class="projet-info">
+                    <h3>StadiumCompany (Infrastructure Stagiaire)</h3>
+                    <p class="technologies">Technologies: VMWare, Routage, Linux (Systèmes Distribués)</p>
+                    <p><strong>But Principal :</strong> Administration des systèmes et réseaux informatiques complexes d'un Stade comprenant plusieurs sites distincts, nécessitant une gestion fine des interconnexions et de la sécurité des données.</p>
+                </div>
+                <div class="projet-links">
+                    <a href="#" target="_blank" class="btn-project"><i class="far fa-file-pdf"></i> Voir Présentation PDF</a>
+                    <a href="https://github.com/NoamV2V" target="_blank" class="btn-project"><i class="fab fa-github"></i> Dépôt GitHub</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="heading"><i class="fas fa-handshake"></i> Me <span>Contacter</span></h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:idbnoam@gmail.com">idbnoam@gmail.com</a></p>
+                <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/noam-id-belaid-b8488431b/" target="_blank">noam-id-belaid</a></p>
+                <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/NoamV2V" target="_blank">NoamV2V</a></p>
+                <p>N'hésitez pas à me contacter pour toute opportunité professionnelle ou projet de collaboration dans les systèmes et réseaux.</p>
+            </div>
+            <form action="#" method="POST" class="contact-form">
+                <h3>Envoyer un Message</h3>
+                <input type="text" placeholder="Votre Nom" required>
+                <input type="email" placeholder="Votre Email" required>
+                <textarea name="message" placeholder="Votre Message" required></textarea>
+                <button type="submit" class="btn-main">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Noam ID Belaid. Tous droits réservés.</p>
+        <div class="footer-icon">
+            <a href="#accueil"><i class="fas fa-arrow-up"></i></a>
+        </div>
+    </footer>
+
 </body>
 </html>
