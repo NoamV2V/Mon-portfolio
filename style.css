@@ -36,9 +36,7 @@ section {
 /* --- NAVIGATION --- */
 .header {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 0; left: 0; width: 100%;
     padding: 2rem 9%;
     background: var(--bg-color);
     display: flex;
@@ -49,39 +47,50 @@ section {
 }
 
 .logo { font-size: 2.8rem; color: var(--text-color); font-weight: 700; }
-.navbar a { font-size: 1.8rem; color: var(--text-color); margin-left: 3.5rem; transition: 0.3s; }
+.navbar a { font-size: 1.8rem; color: var(--text-color); margin-left: 3.5rem; }
 .navbar a:hover { color: var(--main-color); }
 
-/* --- ACCUEIL --- */
+/* --- ACCUEIL (TEXTES BOOSTÉS) --- */
 .accueil-content { display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1200px; margin: 0 auto; }
-.text-zone .greeting { font-size: 3.5rem; font-weight: 400; }
+
+.text-zone .greeting { font-size: 3.8rem; font-weight: 400; color: var(--text-color); }
 .text-zone h1 { font-size: 6.5rem; font-weight: 800; line-height: 1.1; margin: 1rem 0; }
 .text-zone h2 { font-size: 3.5rem; font-weight: 600; }
 .sisr-highlight { color: var(--main-color); }
-.text-zone .accroche { font-size: 2.4rem; margin-top: 2.5rem; line-height: 1.4; max-width: 85rem; font-weight: 300; }
+.text-zone .accroche { font-size: 2.4rem; margin-top: 2.5rem; line-height: 1.5; max-width: 85rem; color: var(--text-color); }
 
-/* PHOTO : Correction pour qu'elle ne soit plus coupée */
+/* PHOTO : Correction finale du cadrage */
 .image-zone { 
-    width: 400px; 
-    height: 400px; 
+    width: 400px; height: 400px; 
     border-radius: 50%; 
     overflow: hidden; 
     border: 0.6rem solid var(--main-color); 
     box-shadow: 0 0 3rem var(--shadow-color);
-    background: #2a2a45; /* Fond neutre si la photo ne remplit pas tout */
 }
 .profile-img { 
-    width: 100%; 
-    height: 100%; 
-    object-fit: contain; /* Empêche de couper la tête/épaules */
-    transform: scale(1.1); /* Zoom léger pour ajuster si besoin */
+    width: 100%; height: 100%; 
+    object-fit: cover; 
+    object-position: center 10%; /* Évite de couper le haut du crâne */
+}
+
+.btn-main {
+    display: inline-block;
+    padding: 1.2rem 3.5rem;
+    background: var(--main-color);
+    border-radius: 0.8rem;
+    font-size: 1.8rem;
+    color: var(--bg-color);
+    font-weight: 700;
+    margin-top: 4rem;
+    border: 0.2rem solid var(--main-color);
+    transition: 0.3s;
 }
 
 /* --- TITRES DE SECTION --- */
 .heading { text-align: center; font-size: 5rem; margin-bottom: 6rem; font-weight: 800; }
 .heading span { color: var(--main-color); }
 
-/* --- COMPÉTENCES --- */
+/* --- COMPÉTENCES (RESSERRÉES) --- */
 .competences { background: var(--secondary-bg-color); }
 .competences-grid {
     display: grid;
@@ -89,71 +98,71 @@ section {
     gap: 2.5rem; 
     justify-content: center;
 }
-.competence-box { background: var(--bg-color); padding: 3rem; border-radius: 1.5rem; transition: 0.3s; border: 1px solid rgba(0, 238, 255, 0.1); }
-.competence-box h3 { font-size: 2.4rem; margin-bottom: 2.5rem; color: var(--main-color); text-align: center; }
+.competence-box { background: var(--bg-color); padding: 3rem; border-radius: 1.5rem; transition: 0.3s; }
+.competence-box h3 { font-size: 2.4rem; margin-bottom: 2rem; color: var(--main-color); text-align: center; }
 .skill-item p { font-size: 1.7rem; margin-bottom: 0.8rem; }
+.progress-bar { width: 100%; height: 1rem; background: var(--secondary-bg-color); border-radius: 0.5rem; }
+.progress-bar span { display: block; height: 100%; background: var(--main-color); border-radius: 0.5rem; }
 
-/* --- ÉPREUVES E4 / E5 --- */
-.sub-heading { 
-    font-size: 4rem; /* Augmenté pour "Mes réalisations Professionnelles" */
-    text-align: center; 
-    margin: 4rem 0;
-    font-weight: 700;
+/* --- PROJETS E4 / E5 --- */
+.sub-heading { font-size: 4rem; text-align: center; margin: 5rem 0 3rem; font-weight: 700; color: var(--main-color); }
+
+.epreuve-intro {
+    background: var(--bg-color); padding: 3rem; border-radius: 1rem; 
+    margin-bottom: 4rem; border: 0.1rem solid var(--main-color);
 }
+.epreuve-intro h4 { font-size: 2.5rem; color: var(--main-color); margin-bottom: 1.5rem; }
+.epreuve-intro p, .epreuve-intro li { font-size: 1.8rem; line-height: 1.6; }
 
-.projets-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr)); gap: 4rem; }
-.projet-card { background: var(--secondary-bg-color); padding: 3.5rem; border-radius: 1.5rem; border: 2px solid transparent; transition: 0.4s; }
-.projet-card:hover { border-color: var(--main-color); transform: translateY(-10px); }
+.projets-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr)); gap: 3rem; }
+.projet-card { background: var(--secondary-bg-color); padding: 3.5rem; border-radius: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; transition: 0.3s; }
 
-/* BOUTONS PDF : Look moderne et lisible */
+.projet-info h3 { font-size: 2.4rem; margin-bottom: 1rem; color: #fff; }
+.technologies { font-size: 1.5rem; color: var(--main-color); font-weight: 600; margin-bottom: 1.5rem; }
+.projet-info p { font-size: 1.7rem; line-height: 1.6; }
+
+/* BOUTON PDF REFAIT */
 .btn-project {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
     margin-top: 2.5rem;
     padding: 1.2rem 2.5rem;
-    background: var(--main-color);
-    border: none;
+    background: transparent;
+    border: 0.2rem solid var(--main-color);
     border-radius: 0.8rem;
-    color: var(--bg-color);
+    color: var(--main-color);
     font-size: 1.6rem;
     font-weight: 700;
+    text-align: center;
     transition: 0.3s;
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
-.btn-project:hover {
-    background: white;
-    box-shadow: 0 0 20px var(--main-color);
-    transform: scale(1.05);
-}
+.btn-project:hover { background: var(--main-color); color: var(--bg-color); box-shadow: 0 0 1.5rem var(--shadow-color); }
 
 /* --- VEILLE TECHNOLOGIQUE --- */
-.veille-container { padding: 5rem; border-radius: 2rem; border: 2px solid var(--main-color); }
-.veille-container h3 { font-size: 3.8rem; margin-bottom: 3rem; }
+.veille-container { background: var(--secondary-bg-color); padding: 5rem; border-radius: 1.5rem; border: 0.2rem solid var(--main-color); max-width: 1100px; margin: 0 auto; }
+.veille-container h3 { font-size: 4rem; color: var(--main-color); text-align: center; margin-bottom: 3rem; }
 
-/* Titres spécifiques de la veille agrandis */
+/* Titres spécifiques de la veille */
 .veille-container h4 { 
-    font-size: 2.8rem; /* Pour "Principes clés..." et "Impact..." */
-    color: var(--main-color);
-    margin: 3rem 0 1.5rem 0;
+    font-size: 2.8rem; 
+    color: var(--main-color); 
+    margin: 3.5rem 0 1.5rem; 
     font-weight: 700;
+    border-left: 5px solid var(--main-color);
+    padding-left: 1.5rem;
 }
-.veille-container p, .veille-container ul li { font-size: 1.9rem; line-height: 1.8; }
+.veille-container p, .veille-container li { font-size: 1.9rem; line-height: 1.8; margin-bottom: 1.5rem; }
 
 /* --- CONTACT --- */
-.contact-container { gap: 6rem; }
-.contact-info p { font-size: 2.2rem; font-weight: 500; }
-.contact-form { padding: 4rem; max-width: 70rem; }
-.contact-form input, .contact-form textarea { font-size: 1.8rem; padding: 1.8rem; }
+.contact-form { background: var(--secondary-bg-color); padding: 4rem; border-radius: 1.5rem; width: 100%; max-width: 70rem; margin: 0 auto; }
+.contact-form h3 { font-size: 3rem; color: var(--main-color); margin-bottom: 3rem; text-align: center; }
+.contact-form input, .contact-form textarea { font-size: 1.8rem; padding: 1.8rem; background: var(--bg-color); border: 0.1rem solid var(--main-color); color: #fff; margin-bottom: 2rem; border-radius: 0.8rem; width: 100%; }
 
 /* --- FOOTER --- */
+.footer { padding: 3rem 9%; background: var(--secondary-bg-color); display: flex; justify-content: space-between; align-items: center; border-top: 0.1rem solid rgba(255,255,255,0.1); }
 .footer p { font-size: 1.8rem; }
 
 @media (max-width: 768px) {
     .accueil-content { flex-direction: column; text-align: center; }
-    .image-zone { width: 320px; height: 320px; margin-bottom: 4rem; order: -1; }
-    .text-zone h1 { font-size: 4.5rem; }
+    .image-zone { width: 300px; height: 300px; order: -1; margin-bottom: 3rem; }
     .projets-container { grid-template-columns: 1fr; }
 }
