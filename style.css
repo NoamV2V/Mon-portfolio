@@ -176,7 +176,8 @@ section {
 .competences-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
-    gap: 3rem;
+    /* MODIFICATION ICI : Réduction du gap pour les compétences */
+    gap: 1.5rem; 
 }
 
 .competence-box {
@@ -262,7 +263,7 @@ section {
 .projets-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr)); 
-    /* MODIFICATION ICI : Réduction de l'espacement */
+    /* Ce gap est déjà à 1.5rem suite à votre dernière demande, conservé */
     gap: 1.5rem;
 }
 
@@ -525,6 +526,8 @@ section {
     }
     .competences-grid, .projets-container {
         grid-template-columns: 1fr;
+        /* Ajout d'un peu plus d'espace sur mobile pour les cartes qui se superposent */
+        gap: 2.5rem; 
     }
     .contact-container {
         flex-direction: column;
