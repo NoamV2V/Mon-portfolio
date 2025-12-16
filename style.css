@@ -1,7 +1,5 @@
-/* Importation de la police Google Fonts (Poppins) */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-/* Variables de couleurs pour un thème tech sombre */
 :root {
     --main-color: #00eeff; /* Cyan brillant pour les accents */
     --bg-color: #1a1a2e; /* Fond très sombre */
@@ -224,7 +222,33 @@ section {
     border-radius: 0.5rem;
 }
 
-/* 4. Projets */
+/* 4. Projets (E4/E5) */
+.epreuve-intro {
+    background: var(--bg-color);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    margin-bottom: 4rem;
+    border: 0.1rem solid var(--main-color);
+}
+
+.epreuve-intro h4 {
+    font-size: 2.2rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.epreuve-intro p {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.sub-heading {
+    font-size: 3rem;
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 3rem;
+}
+
 .projets-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -267,6 +291,7 @@ section {
     margin-top: 2rem;
     display: flex;
     gap: 1.5rem;
+    flex-wrap: wrap; /* Assure que les boutons s'ajustent sur mobile */
 }
 
 .btn-project {
@@ -285,7 +310,61 @@ section {
     color: var(--bg-color);
 }
 
-/* 5. Contact */
+/* 5. Veille Technologique */
+.veille-container {
+    background: var(--secondary-bg-color);
+    padding: 4rem;
+    border-radius: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 0.1rem solid var(--main-color);
+}
+
+.veille-container h3 {
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.veille-container .veille-date {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    opacity: 0.7;
+}
+
+.veille-container p {
+    font-size: 1.7rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.veille-container h4 {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.veille-container ul {
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.veille-container ul li {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    list-style-type: square;
+    color: var(--text-color);
+}
+
+.veille-btn {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+}
+
+/* 6. Contact */
 .contact {
     background: var(--bg-color);
 }
@@ -405,6 +484,16 @@ section {
     .footer {
         padding: 2rem 4%;
     }
+    .navbar {
+        display: none; /* Cache la navigation principale dans la vue tablette/mobile pour simplifier */
+    }
+    .header {
+        justify-content: center;
+    }
+    .logo {
+        position: absolute;
+        left: 4%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -433,6 +522,9 @@ section {
     .contact-info p i {
         display: none; /* Cache les icônes dans la vue mobile pour l'alignement */
     }
+    .epreuve-intro {
+        text-align: left;
+    }
 }
 
 @media (max-width: 450px) {
@@ -441,12 +533,6 @@ section {
     }
     .btn-box {
         display: flex;
-        justify-content: center;
-    }
-    .navbar {
-        display: none; /* Cache la navigation dans les plus petits écrans pour un menu hamburger */
-    }
-    .header {
         justify-content: center;
     }
     .footer {
