@@ -261,7 +261,8 @@ section {
 
 .projets-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    /* Mise à jour pour s'assurer que 3 cartes peuvent s'afficher plus facilement */
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); 
     gap: 3rem;
 }
 
