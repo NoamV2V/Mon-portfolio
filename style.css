@@ -291,6 +291,7 @@ section {
 }
 
 /* 5. Veille Technologique */
+/* --- VEILLE TECHNOLOGIQUE (CORRECTION TITRES) --- */
 .veille-container {
     background: var(--secondary-bg-color);
     padding: 5rem;
@@ -307,15 +308,16 @@ section {
     margin-bottom: 3.5rem;
 }
 
-/* MISE EN VALEUR DES DEUX TITRES SPÉCIFIQUES */
+/* CIBLE LES TITRES SPÉCIFIQUES POUR LES RENDRE GRANDS ET LISIBLES */
 .veille-container .titre-veille-focus {
     display: block;
-    font-size: 2.6rem; /* Taille augmentée pour la visibilité */
+    font-size: 2.8rem; /* TAILLE AUGMENTÉE POUR ÊTRE PLUS GRAND QUE LE TEXTE */
     color: var(--main-color);
     font-weight: 700;
-    margin-top: 3.5rem;
-    margin-bottom: 1.5rem;
-    text-decoration: underline; /* Optionnel : pour encore plus de relief */
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase; /* Donne plus d'importance */
+    letter-spacing: 1px;
 }
 
 .veille-container p {
@@ -331,16 +333,6 @@ section {
     margin-bottom: 2rem;
     margin-left: 2.5rem;
     list-style: square;
-}
-
-.veille-container ul li strong {
-    font-size: 1.9rem;
-    color: #fff;
-}
-
-.veille-btn-container {
-    text-align: center;
-    margin-top: 4rem;
 }
 /* 6. Contact */
 .contact-form {
