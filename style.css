@@ -82,19 +82,27 @@ section {
     max-width: 1200px;
 }
 
+/* MODIFICATION CIBLÉE : Bonjour, je suis */
+.text-zone h2 {
+    font-size: 3.8rem; /* Augmenté pour plus de lisibilité */
+    color: var(--text-color);
+}
+
 .text-zone h1 {
     font-size: 5.6rem;
     font-weight: 700;
     line-height: 1.3;
 }
 
-.text-zone h2 {
-    font-size: 3.2rem;
-    color: var(--text-color);
-}
-
 .sisr-highlight {
     color: var(--main-color);
+}
+
+/* MODIFICATION CIBLÉE : Conception, Déploiement... */
+.text-zone p {
+    font-size: 2.2rem; /* Augmenté pour être plus beau et lisible */
+    margin-top: 1rem;
+    line-height: 1.4;
 }
 
 .btn-main {
@@ -116,9 +124,8 @@ section {
     box-shadow: 0 0 1rem var(--shadow-color);
 }
 
-/* --- MODIFICATION CIBLÉE : CADRAGE PHOTO --- */
 .image-zone {
-    width: 320px; /* Rond légèrement plus petit pour mieux encadrer */
+    width: 320px;
     height: 320px;
     border-radius: 50%;
     overflow: hidden;
@@ -130,8 +137,8 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: scale(1.15); /* Zoom pour supprimer les bords/trous */
-    object-position: center 20%; /* Remonte la photo vers le visage */
+    transform: scale(1.15);
+    object-position: center 20%;
 }
 
 /* Titres de Section */
