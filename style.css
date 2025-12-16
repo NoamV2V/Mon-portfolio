@@ -261,8 +261,8 @@ section {
 
 .projets-container {
     display: grid;
-    /* Mise à jour pour s'assurer que 3 cartes peuvent s'afficher plus facilement */
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); 
+    /* Rétabli pour favoriser l'affichage par 2 colonnes sur les grands écrans, selon la demande. */
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr)); 
     gap: 3rem;
 }
 
@@ -321,7 +321,7 @@ section {
     color: var(--bg-color);
 }
 
-/* 5. Veille Technologique - MISE À JOUR POUR LA TAILLE DE POLICE */
+/* 5. Veille Technologique */
 .veille-container {
     background: var(--secondary-bg-color);
     padding: 4rem;
@@ -332,14 +332,14 @@ section {
 }
 
 .veille-container h3 {
-    font-size: 3.5rem; /* Augmenté */
+    font-size: 3.5rem; 
     color: var(--main-color);
     margin-bottom: 1rem;
     text-align: center;
 }
 
 .veille-container .veille-date {
-    font-size: 1.6rem; /* Augmenté */
+    font-size: 1.6rem; 
     color: var(--text-color);
     margin-bottom: 2rem;
     opacity: 0.8;
@@ -347,13 +347,13 @@ section {
 }
 
 .veille-container p {
-    font-size: 1.8rem; /* Augmenté */
+    font-size: 1.8rem; 
     line-height: 1.7;
     margin-bottom: 2rem;
 }
 
 .veille-container h4 {
-    font-size: 2.5rem; /* Augmenté */
+    font-size: 2.5rem; 
     color: var(--main-color);
     margin-top: 3rem;
     margin-bottom: 1.5rem;
@@ -365,7 +365,7 @@ section {
 }
 
 .veille-container ul li {
-    font-size: 1.8rem; /* Augmenté */
+    font-size: 1.8rem; 
     line-height: 1.6;
     list-style-type: square;
     color: var(--text-color);
@@ -373,9 +373,9 @@ section {
 
 .veille-btn {
     margin-top: 2rem;
-    font-size: 1.8rem; /* Augmenté */
+    font-size: 1.8rem; 
     padding: 1.2rem 2.5rem;
-    display: block; /* Pour centrer le bouton */
+    display: block; 
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
