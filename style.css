@@ -261,9 +261,9 @@ section {
 
 .projets-container {
     display: grid;
-    /* Rétabli pour favoriser l'affichage par 2 colonnes sur les grands écrans, selon la demande. */
     grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr)); 
-    gap: 3rem;
+    /* MODIFICATION ICI : Réduction de l'espacement */
+    gap: 1.5rem;
 }
 
 .projet-card {
