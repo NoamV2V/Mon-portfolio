@@ -310,7 +310,7 @@ section {
     color: var(--bg-color);
 }
 
-/* 5. Veille Technologique */
+/* 5. Veille Technologique - MISE À JOUR POUR LA TAILLE DE POLICE */
 .veille-container {
     background: var(--secondary-bg-color);
     padding: 4rem;
@@ -321,26 +321,28 @@ section {
 }
 
 .veille-container h3 {
-    font-size: 3rem;
+    font-size: 3.5rem; /* Augmenté */
     color: var(--main-color);
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .veille-container .veille-date {
-    font-size: 1.4rem;
+    font-size: 1.6rem; /* Augmenté */
     color: var(--text-color);
     margin-bottom: 2rem;
-    opacity: 0.7;
+    opacity: 0.8;
+    text-align: center;
 }
 
 .veille-container p {
-    font-size: 1.7rem;
-    line-height: 1.6;
+    font-size: 1.8rem; /* Augmenté */
+    line-height: 1.7;
     margin-bottom: 2rem;
 }
 
 .veille-container h4 {
-    font-size: 2rem;
+    font-size: 2.5rem; /* Augmenté */
     color: var(--main-color);
     margin-top: 3rem;
     margin-bottom: 1.5rem;
@@ -352,17 +354,22 @@ section {
 }
 
 .veille-container ul li {
-    font-size: 1.6rem;
-    line-height: 1.5;
+    font-size: 1.8rem; /* Augmenté */
+    line-height: 1.6;
     list-style-type: square;
     color: var(--text-color);
 }
 
 .veille-btn {
     margin-top: 2rem;
-    font-size: 1.6rem;
-    padding: 1rem 2rem;
+    font-size: 1.8rem; /* Augmenté */
+    padding: 1.2rem 2.5rem;
+    display: block; /* Pour centrer le bouton */
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
+/* Fin des ajustements de la Veille */
 
 /* 6. Contact */
 .contact {
@@ -525,6 +532,15 @@ section {
     .epreuve-intro {
         text-align: left;
     }
+    .veille-container h3 {
+        font-size: 3rem;
+    }
+    .veille-container h4 {
+        font-size: 2.2rem;
+    }
+    .veille-container p, .veille-container ul li {
+        font-size: 1.7rem;
+    }
 }
 
 @media (max-width: 450px) {
@@ -539,5 +555,11 @@ section {
         flex-direction: column-reverse;
         text-align: center;
         gap: 1.5rem;
+    }
+    .veille-container h3 {
+        font-size: 2.5rem;
+    }
+    .veille-btn {
+        font-size: 1.6rem;
     }
 }
