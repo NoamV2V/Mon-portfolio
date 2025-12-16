@@ -293,65 +293,55 @@ section {
 /* 5. Veille Technologique */
 .veille-container {
     background: var(--secondary-bg-color);
-    padding: 5rem; /* Espace interne augmenté */
+    padding: 5rem;
     border-radius: 1rem;
-    max-width: 1100px; /* Légèrement plus large pour le confort visuel */
+    max-width: 1100px;
     margin: 0 auto;
     border: 0.1rem solid var(--main-color);
 }
 
 .veille-container h3 {
-    font-size: 4rem; /* Titre principal plus imposant */
+    font-size: 4rem;
     color: var(--main-color);
     text-align: center;
     margin-bottom: 3.5rem;
 }
 
-/* Titres des sous-sections (Principes clés et Impact) */
-.veille-container strong, 
-.veille-container b {
-    display: inline-block;
-    font-size: 2rem; /* Plus gros pour bien séparer les idées */
+/* MISE EN VALEUR DES DEUX TITRES SPÉCIFIQUES */
+.veille-container .titre-veille-focus {
+    display: block;
+    font-size: 2.6rem; /* Taille augmentée pour la visibilité */
     color: var(--main-color);
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    font-weight: 700;
+    margin-top: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-decoration: underline; /* Optionnel : pour encore plus de relief */
 }
 
-/* Texte général de la veille */
 .veille-container p {
-    font-size: 1.8rem; /* Taille idéale pour la lecture longue */
-    line-height: 1.8; /* Plus d'air entre les lignes */
+    font-size: 1.8rem;
+    line-height: 1.8;
     margin-bottom: 2rem;
     color: var(--text-color);
 }
 
-/* Listes à puces (Vérification, Privilège, Segmentation) */
 .veille-container ul li {
     font-size: 1.8rem;
     line-height: 1.7;
     margin-bottom: 2rem;
-    padding-left: 1rem;
-    list-style: square;
     margin-left: 2.5rem;
+    list-style: square;
 }
 
-/* Texte spécifique à l'intérieur des listes */
 .veille-container ul li strong {
-    font-size: 1.9rem; /* Légèrement plus gros pour les termes techniques */
-    color: #fff; /* Blanc pur pour faire ressortir les mots clés */
+    font-size: 1.9rem;
+    color: #fff;
 }
 
-/* Bouton Lire le Guide */
 .veille-btn-container {
     text-align: center;
     margin-top: 4rem;
 }
-
-.veille-container .btn-main {
-    padding: 1.5rem 4rem;
-    font-size: 2rem;
-}
-
 /* 6. Contact */
 .contact-form {
     display: flex;
