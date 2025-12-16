@@ -5,7 +5,6 @@
     --bg-color: #1a1a2e;
     --secondary-bg-color: #272740;
     --text-color: #e4e4e4;
-    --border-color: #00eeff;
     --shadow-color: rgba(0, 238, 255, 0.4);
 }
 
@@ -19,7 +18,7 @@
 }
 
 html {
-    font-size: 62.5%; /* 1rem = 10px */
+    font-size: 62.5%; 
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -31,10 +30,10 @@ body {
 
 section {
     min-height: 100vh;
-    padding: 8rem 9%; /* Légère réduction du padding vertical */
+    padding: 8rem 9%;
 }
 
-/* 1. Navigation */
+/* --- NAVIGATION --- */
 .header {
     position: fixed;
     top: 0;
@@ -49,128 +48,29 @@ section {
     border-bottom: 0.1rem solid var(--secondary-bg-color);
 }
 
-.logo {
-    font-size: 2.5rem;
-    color: var(--text-color);
-    font-weight: 600;
-}
+.logo { font-size: 2.5rem; color: var(--text-color); font-weight: 600; }
+.navbar a { font-size: 1.7rem; color: var(--text-color); margin-left: 3.5rem; transition: 0.3s; }
+.navbar a:hover { color: var(--main-color); }
 
-.navbar a {
-    font-size: 1.7rem;
-    color: var(--text-color);
-    font-weight: 500;
-    margin-left: 3.5rem;
-    transition: color 0.3s;
-}
+/* --- ACCUEIL --- */
+.accueil { display: flex; justify-content: center; align-items: center; }
+.accueil-content { display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1200px; }
+.text-zone h1 { font-size: 5.6rem; font-weight: 700; }
+.text-zone h2 { font-size: 3.2rem; color: var(--text-color); }
+.sisr-highlight { color: var(--main-color); }
+.image-zone { width: 300px; height: 300px; border-radius: 50%; overflow: hidden; border: 0.5rem solid var(--main-color); box-shadow: 0 0 2rem var(--shadow-color); }
+.profile-img { width: 100%; height: 100%; object-fit: cover; }
 
-.navbar a:hover,
-.navbar a.active {
-    color: var(--main-color);
-}
-
-/* 2. Accueil */
-.accueil {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.accueil-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-}
-
-.text-zone {
-    max-width: 60rem;
-}
-
-.text-zone .greeting {
-    font-size: 2.5rem;
-    color: var(--main-color);
-}
-
-.text-zone h1 {
-    font-size: 5.6rem;
-    font-weight: 700;
-    line-height: 1.3;
-}
-
-.text-zone h2 {
-    font-size: 3.2rem;
-    color: var(--text-color);
-}
-
-.text-zone .sisr-highlight {
-    color: var(--main-color);
-}
-
-.text-zone .accroche {
-    font-size: 1.6rem;
-    margin-top: 2rem;
-}
-
-.btn-box {
-    margin-top: 4rem;
-}
-
-.btn-main {
-    display: inline-block;
-    padding: 1rem 3rem;
-    background: var(--main-color);
-    border-radius: 0.8rem;
-    font-size: 1.8rem;
-    color: var(--bg-color);
-    font-weight: 600;
-    border: 0.2rem solid var(--main-color);
-    transition: 0.3s;
-}
-
-.btn-main:hover {
-    box-shadow: 0 0 1rem var(--shadow-color);
-    background: transparent;
-    color: var(--main-color);
-}
-
-.image-zone {
-    width: 320px;
-    height: 320px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 0.5rem solid var(--main-color);
-    box-shadow: 0 0 2rem var(--shadow-color);
-}
-
-.profile-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Titres de Section */
-.heading {
-    text-align: center;
-    font-size: 4rem;
-    margin-bottom: 4rem;
-}
-
-.heading span {
-    color: var(--main-color);
-}
-
-/* 3. Compétences - GRILLE CÔTE À CÔTE */
-.competences {
-    background: var(--secondary-bg-color);
-}
+/* --- COMPÉTENCES (CORRECTION CÔTE À CÔTE) --- */
+.competences { background: var(--secondary-bg-color); }
+.heading { text-align: center; font-size: 4rem; margin-bottom: 4rem; }
+.heading span { color: var(--main-color); }
 
 .competences-grid {
     display: grid;
-    /* On utilise minmax(24rem) pour forcer l'alignement horizontal sur PC */
-    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    /* FORCE 3 COLONNES SUR PC */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 2rem;
-    justify-content: center;
 }
 
 .competence-box {
@@ -182,182 +82,49 @@ section {
 }
 
 .competence-box:hover {
-    transform: translateY(-0.5rem);
+    transform: translateY(-5px);
     border-color: var(--main-color);
-    box-shadow: 0 0 1.5rem var(--shadow-color);
 }
 
-.competence-box h3 {
-    font-size: 2.2rem;
-    margin-bottom: 2rem;
-    color: var(--main-color);
-    text-align: center;
-}
+.competence-box h3 { font-size: 2.2rem; margin-bottom: 2rem; color: var(--main-color); text-align: center; }
+.skill-item { margin-bottom: 1.5rem; }
+.skill-item p { font-size: 1.4rem; margin-bottom: 0.5rem; }
+.progress-bar { width: 100%; height: 0.8rem; background: var(--secondary-bg-color); border-radius: 0.5rem; }
+.progress-bar span { display: block; height: 100%; background: var(--main-color); border-radius: 0.5rem; }
 
-.skill-item {
-    margin-bottom: 1.5rem;
-}
-
-.skill-item p {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.progress-bar {
-    width: 100%;
-    height: 0.8rem;
-    background: var(--secondary-bg-color);
-    border-radius: 0.5rem;
-}
-
-.progress-bar span {
-    display: block;
-    height: 100%;
-    background: var(--main-color);
-    border-radius: 0.5rem;
-}
-
-/* 4. Projets - GRILLE 2 COLONNES */
+/* --- PROJETS (FORCE 2 COLONNES) --- */
 .projets-container {
     display: grid;
-    /* Force 2 colonnes sur écran large */
-    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
-    gap: 2rem;
-}
-
-.epreuve-intro {
-    background: var(--bg-color);
-    padding: 2rem;
-    border-radius: 1rem;
-    margin-bottom: 3rem;
-    border: 0.1rem solid var(--main-color);
-}
-
-.sub-heading {
-    font-size: 2.8rem;
-    text-align: center;
-    margin-bottom: 3rem;
+    /* FORCE 2 COLONNES SUR PC */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 2.5rem;
 }
 
 .projet-card {
     background: var(--secondary-bg-color);
     border-radius: 1rem;
     padding: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     border: 0.2rem solid transparent;
     transition: 0.3s;
 }
 
-.projet-card:hover {
-    border-color: var(--main-color);
-    transform: scale(1.01);
-}
+.projet-card:hover { border-color: var(--main-color); }
+.projet-info h3 { font-size: 2rem; margin-bottom: 1rem; }
+.technologies { font-size: 1.3rem; color: var(--main-color); font-weight: 600; margin-bottom: 1rem; }
+.projet-info p { font-size: 1.5rem; line-height: 1.6; }
+.btn-project { display: inline-block; margin-top: 1.5rem; padding: 0.8rem 1.5rem; background: var(--bg-color); border: 0.1rem solid var(--main-color); border-radius: 0.6rem; color: var(--main-color); transition: 0.3s; }
+.btn-project:hover { background: var(--main-color); color: var(--bg-color); }
 
-.projet-info h3 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.projet-info .technologies {
-    font-size: 1.3rem;
-    color: var(--main-color);
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-}
-
-.projet-info p {
-    font-size: 1.5rem;
-    line-height: 1.6;
-}
-
-.projet-links {
-    margin-top: 2rem;
-}
-
-.btn-project {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background: var(--bg-color);
-    border: 0.1rem solid var(--main-color);
-    border-radius: 0.6rem;
-    color: var(--main-color);
-    font-size: 1.4rem;
-    transition: 0.3s;
-}
-
-.btn-project:hover {
-    background: var(--main-color);
-    color: var(--bg-color);
-}
-
-/* 5. Veille Technologique */
-.veille-container {
-    background: var(--secondary-bg-color);
-    padding: 3rem;
-    border-radius: 1rem;
-    max-width: 900px;
-    margin: 0 auto;
-    border: 0.1rem solid var(--main-color);
-}
-
-.veille-container h3 {
-    font-size: 3rem;
-    color: var(--main-color);
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-/* 6. Contact */
-.contact-container {
-    display: flex;
-    justify-content: center;
-    gap: 5rem;
-    flex-wrap: wrap;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 50rem;
-    padding: 2.5rem;
-    background: var(--secondary-bg-color);
-    border-radius: 1rem;
-}
-
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 1.2rem;
-    background: var(--bg-color);
-    border: 0.1rem solid var(--main-color);
-    color: #fff;
-    margin-bottom: 1.5rem;
-    border-radius: 0.5rem;
-}
-
-/* 7. Footer */
-.footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 2rem 9%;
-    background: var(--secondary-bg-color);
-    align-items: center;
-}
-
-/* MEDIA QUERIES */
+/* --- RESPONSIVE (POUR MOBILE UNIQUEMENT) --- */
 @media (max-width: 991px) {
-    section { padding: 8rem 4%; }
-    .header { padding: 2rem 4%; }
+    .competences-grid { grid-template-columns: repeat(2, 1fr); } /* 2 colonnes sur tablette */
 }
 
 @media (max-width: 768px) {
     .accueil-content { flex-direction: column; text-align: center; }
-    .image-zone { margin-bottom: 3rem; order: -1; }
-    .competences-grid, .projets-container {
-        grid-template-columns: 1fr; /* Passage en 1 colonne sur mobile */
-        gap: 2rem;
+    .image-zone { order: -1; margin-bottom: 3rem; }
+    
+    .competences-grid, .projets-container { 
+        grid-template-columns: 1fr; /* 1 seule colonne sur mobile */
     }
-    .contact-container { flex-direction: column; align-items: center; }
 }
